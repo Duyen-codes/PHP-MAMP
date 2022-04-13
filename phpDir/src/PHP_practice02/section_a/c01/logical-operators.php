@@ -1,9 +1,10 @@
+
 <?php 
-$item    = 'Chocolate';
-$stock   = 5;
-$wanted  = 3;
-$deliver = true;
-$can_buy = (($wanted <= $stock) && ($deliver == true));
+  $item = 'Chocolate';
+  $stock = 5;
+  $wanted = 3;
+  $deliver = true;
+  $can_buy = (($wanted <= $stock) && ($deliver == true))
 ?>
 <!DOCTYPE html>
 <html lang="en-us">

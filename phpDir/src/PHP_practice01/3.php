@@ -22,14 +22,51 @@
 
 
 	Step 3 : Make a switch Statement that test againts one condition with 5 cases
-
  */
 
+ 
+$favcolor = 'red';
+switch($favcolor) {
+	case "red":
+	echo "Your favorite color is red!";
+	break;
+	case 'blue':
+		echo 'Your favorite color is blue!';
+		break;
+		case 'green':
+			echo 'green!';
+			break;
+			case 'pink':
+				echo 'pink';
+				break;
+				default:
+				echo 'Your favorite color is something else.';
+}
 	
 ?>
 
+<?php 
+	$a = 50;
+	$b = 10;
+	if($a < $b) {
+		echo 'PHP';
+	} elseif ($a == $b) {
+		echo 'a == b';
+	} else {
+		echo 'I love PHP';
+	}
+?>
 
+<?php 
+// For loop displays 10 numbers
+?>
 
+<?php 
+for ($x = 0; $x <= 10; $x++) {
+	echo "The number is: $x <br>";
+	echo date(DATE_RFC2822);
+}
+?>
 
 
 

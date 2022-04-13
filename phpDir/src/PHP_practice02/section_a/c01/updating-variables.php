@@ -4,6 +4,8 @@
   Write you php code here
 
    */
+  $name = "Guest";
+  $name = 'James Bond';
 
 ?>
 <!DOCTYPE html>
@@ -16,7 +18,7 @@
 
 <body>
   <h1>The Candy Store</h1>
-
+  <?php echo $name?>
 </body>
 
 </html>

@@ -33,17 +33,22 @@
 		<?php 
 		$number1 = 10;
 		$number2 = 20;
-		echo $number1 + $number2;
+		$sum = $number1 + $number2;
+		?>
+		<?= $sum ?>
+
+		<?php 
+		// echo $number + $number2;
+		?>
+		
+		<?php 
+		$cars = array( 'Volvo', 'BMW','Toyota',);
+		print_r($cars)
 		?>
 
 		<?php 
-		$cars = array('Volvo', 'BMW', 'Toyota');
-		echo $cars;
-		?>
-
-		<?php 
-		$Cars = array('Volvo' => "2005", 'BMW' => "2009", 'Toyota' => "2022");
-		echo $Cars;
+		$Cars_associative = ['1' => "Volvo", '2' => "BMW", '3' => "Toyota",];
+		print_r($Cars);
 		?>
 
 	</article>

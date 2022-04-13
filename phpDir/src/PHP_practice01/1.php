@@ -25,19 +25,12 @@
 
 
 		   */
-
-    ?>
-
-    <h1><?php echo 'Hello PHP' ?> </h1>
+     #This function is to say hello
+      echo "<h1>Hello PHP</h1>";
     
+      ?>
 
-    <?php 
-    /*
-    <p>
-      <?php echo "This is a paragraph" ?>
-    </p> 
-    */
-?> 
+
 
 
   </article>

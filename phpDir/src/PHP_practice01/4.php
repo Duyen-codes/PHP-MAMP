@@ -23,7 +23,34 @@
 
  */
 
+ function addNumbers() {
+	 $number1 = 1;
+	 $number2 = 2;
+	 $sum = $number1 + $number2;
+	 echo $sum;
+ }
+
+ echo addNumbers() . "<br>";
+ 
 	
+ function multiplyNumber(int $a, int $b) {
+	return $a * $b;
+ }
+ echo multiplyNumber(5, 2) . "<br>";
+
+ function setHeight(int $minheight = 50) {
+	 echo "The height is : $minheight <br>";
+ }
+setHeight();
+ setHeight(350);
+
+ function sum(int $x, int $y) {
+	 $total = $x + $y;
+	 return $total;
+ }
+
+ echo "The sum of 5 + 10 = " . sum(5, 10) . "<br>";
+ echo "The sum of 7 + 3 = " . sum(7, 3) . "<br>";
 ?>
 
 
