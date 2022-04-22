@@ -17,12 +17,24 @@ that was named in the query string
 Step 4:  If the value in the city is a blank string it should display
 "Please select a city"
 */
+$addresses = ["Helsinki" => "Helsinki: Kaivokatu 1, 00100 Helsinki",
+            "London" => "London: 48 Store Street’, WC1E, 7BS",
+            "Sydney" => "Sydney: 1243 7th Street, 10212",
+];
+
+$city_name = $_POST['city'] ?? '';
+    if (array_key_exists($city_name, $addresses)) {
+        echo $addresses[$city_name];
+    } else {
+        echo 'Please select a city';
+    }
 ?>
 
-<form action="get-2.php" method="get">
-    
+<form action="get-2.php" method="post">
+    <input type="text" name="city">
+    <input type="submit" name="submit" value="search">
 </form>
 
-//Write your code here
+
 
 <?php include 'includes/footer.php' ?>

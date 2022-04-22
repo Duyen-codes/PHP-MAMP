@@ -27,6 +27,10 @@
 
 	*/
 	
+	$password = "my password";
+	$salt = '$2a$09$anexamplestringforsalt$';
+	$result = crypt($password, $salt);
+	echo $result;
 	?>
 
 

@@ -48,7 +48,7 @@
 
 		<?php 
 		$Cars_associative = ['1' => "Volvo", '2' => "BMW", '3' => "Toyota",];
-		print_r($Cars);
+	
 		?>
 
 	</article>

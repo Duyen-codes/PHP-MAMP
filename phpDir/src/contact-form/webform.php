@@ -43,7 +43,6 @@
         $subject = $_POST["subject"];
         $message = $_POST["message"];
         $headers = 'From:' . $email;
-        echo $name;
         mail("cpravesh@hotmail.com", $subject, $message, $headers);
     }
 ?>

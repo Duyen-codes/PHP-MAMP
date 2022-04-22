@@ -1,5 +1,5 @@
 <?php
-session_start();             // Create/resume session
+session_start();             // Create/resume/start session
 $visited = $_SESSION['visited'] ?? null;  // Get data
 if ($visited) {                           // If visited
     $greeting = 'Hello again!';           // Returning user
@@ -7,6 +7,7 @@ if ($visited) {                           // If visited
     $greeting = 'Welcome!';               // New visitor 
     $_SESSION['visited'] = true;          // Store data
 }
+
 ?>
 <?php include 'includes/header.php'; ?> 
 
