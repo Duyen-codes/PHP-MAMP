@@ -9,7 +9,7 @@ if(isset($_POST['submit'])) {
         exit();
     }
     loginUser($conn, $username,$pwd);
-} else {
-    header("location:../blog_login.php");
-    exit();
-}
+    }  else {
+            header("location:../blog_profile.php");
+            exit();
+    }
