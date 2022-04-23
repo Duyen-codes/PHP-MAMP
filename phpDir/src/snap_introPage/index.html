@@ -4,17 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    Features Company Careers About Login Register Make remote work Get your team
-    in sync, no matter your location. Streamline processes, create team rituals,
-    and watch productivity soar. Learn more
+    <header>
+      <nav>
+        <a href="home.php">
+          <img src="./images/logo.svg" alt="" />
+        </a>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+        <!-- ul>(li>a)*5 -->
+        <div>
+          <ul>
+            <li><a href="features.php">Features</a></li>
+            <li><a href="company.php">Company</a></li>
+            <li><a href="career.php">Career</a></li>
+            <li><a href="about.php">About</a></li>
+          </ul>
+          <ul class="cta">
+            <li><a href="login.php">Login</a></li>
+            <li><a href="register.php">Register</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Make remote work</h2>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar. Learn more
+        </p>
+        <form action="" method="post">
+          <input type="text" placeholder="Email" name="email" />
+          <input type="submit" value="Subscribe" name="submit" />
+        </form>
+      </section>
+      <div class="hero"></div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Design materials and Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Duyen Nguyen</a>.
+      </div>
+    </footer>
   </body>
 </html>
