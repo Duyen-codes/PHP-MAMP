@@ -2,11 +2,13 @@
 $host = 'db';
 // Database user name
 $dbname = 'snapdb';
-$user = 'root';
+$dbuser = 'root';
 //database user password
-$pass = 'lionPass';
+$dbpass = 'lionPass';
 // check the MySQL connection status
-$conn = new mysqli($host, $user, $pass, $dbname);
+$conn = new mysqli($host, $dbuser, $dbpass, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
+} else {
+  echo "Connected to MySQL server successfully!";
 }
