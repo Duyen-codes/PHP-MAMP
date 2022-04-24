@@ -1,3 +1,7 @@
+<?php
+// On every single page inside the website we have a session started. 
+session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

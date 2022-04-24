@@ -70,7 +70,7 @@ function createUser($conn, $name, $email, $username, $pwd) {
     header("location: ../blog_signup.php?error=none");
     exit();
 }
-// Check for empty inputs
+// Login: Check for empty inputs 
 function emptyInputLogin($username, $pwd) {
     $result=null;
     if(empty($username) || empty($pwd)) {

@@ -7,11 +7,25 @@
           create team rituals, and watch productivity soar. Learn more by
           subscribing to our newsletter.
         </p>
-        <form action="" method="post">
+        <form action="home.php" method="post">
           <input type="text" placeholder="Email" name="email" />
           <input type="submit" value="Subscribe" name="submit" />
         </form>
-
+        <?php 
+          if(isset($_POST['submit'])) {
+            $email = $_POST['email'];
+            require_once 'db.php';
+            // Create record into snapSubscriber table
+            $query = "INSERT INTO snapSubscriber(subscriberEmail)VALUES ('$email')";
+            $result = mysqli_query($conn, $query);
+            if(!$result) {
+              die('Subcription failed');
+              header('location: home.php');
+              exit;
+            }
+            echo "<p>Subscribed successfully</p>";
+          }
+        ?>
         <div class="clients">
           <img src="./images/client-databiz.svg" alt="databiz" />
           <img src="./images/client-audiophile.svg" alt="" />

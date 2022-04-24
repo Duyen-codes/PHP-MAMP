@@ -20,10 +20,9 @@
         $email = $_POST['email'];
         $username = $_POST['uid'];
         $pwd = $_POST['pwd'];
-        $pwdrepeat = $_POST['pwdrepeat'];
-
+        $pwdRepeat = $_POST['pwdrepeat'];
+        // create database connection
        require_once 'db.php';
-
        // Sanitize user and password
        $fName = mysqli_escape_string($conn, $fName);
        $lName = mysqli_escape_string($conn, $lName);
@@ -38,9 +37,13 @@
        // Create the record inside database
        $query = "INSERT INTO snapUser(fName, lName, userEmail, userUid, userPwd) VALUES ('$fName', '$lName', '$email', '$username', '$hashedpwd')";
        $result = mysqli_query($conn, $query);
+        echo "<p>Signed up successfully!</p>";
        if(!$result) {
            die ('Query insertion failed');
+           header("location: signup.php");
+           exit();
        }
+     
     }
 ?>
 <?php include 'footer.php' ?>
