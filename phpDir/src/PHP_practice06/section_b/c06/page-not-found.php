@@ -4,9 +4,7 @@
               'NYC'    => '1242 7th Street, 10492',];
 
   $city    = $_GET['city'] ?? '';
-
   $valid   = array_key_exists($city, $cities);
-
   if ($valid) {
   	$address = $cities[$city];
   } else {
@@ -14,7 +12,6 @@
   	$address = '';
   }
 ?>
-
 <?php include 'includes/header.php' ?>
 
 <h1>Page not found</h1>

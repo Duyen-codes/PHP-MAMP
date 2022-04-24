@@ -1,12 +1,10 @@
 <?php include 'includes/header.php'; ?>
-
 <?php
 //Step 1: Fix the form
 //Hints: How the data is collected using form?
 //What attributes of the form that are necessary?
 //After fixing this form, simply run it few times to check how this works
 ?>
-
 <form method="post">
   <p>Name: <input type="text" name="name"></p>
   <p>Age: <input type="text" name="age"></p>

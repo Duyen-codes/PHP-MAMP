@@ -1,11 +1,9 @@
 <?php
 include 'includes/sessions.php';
-
 if ($logged_in) {                              // If already logged in
     header('Location: account.php');           // Redirect to account page
     exit;                                      // Stop further code running
 }    
-
 if($_SERVER['REQUEST_METHOD'] == 'POST') {     // If form submitted
     $user_email    =  $_POST['email'];         // Email user sent
     $user_password =  $_POST['password'];      // Password user sent

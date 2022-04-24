@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>s
+  <head>
     <meta charset="UTF-8">
     <title>Chapter 9 Examples</title>
     <link href="css/styles.css" rel="stylesheet">
