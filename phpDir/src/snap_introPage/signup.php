@@ -43,7 +43,6 @@
            header("location: signup.php");
            exit();
        }
-     
     }
 ?>
 <?php include 'footer.php' ?>

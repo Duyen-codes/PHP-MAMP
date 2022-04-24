@@ -21,13 +21,27 @@ session_start();
         <div class="primary-navigation" data-visible="false">
           <ul>
             <li><a href="home.php">Features</a></li>
-            <li><a href="home.php">Company</a></li>
+            <li><a href="blog.php">Blog</a></li>
             <li><a href="home.php">Career</a></li>
             <li><a href="home.php">About</a></li>
           </ul>
           <ul class="cta">
             <li><a href="login.php">Login</a></li>
             <li><a href="signup.php">Signup</a></li>
+            <?php 
+      // Check if user login or not 
+      ?>
+      <?php 
+        // if(isset($_SESSION["userUid"])) {
+        //   // check if user is logged in 
+        //     echo "<a href='account.php'>Account page</a>";
+        //     echo "<a href='logout.php'>Log out</a>";
+        // } else {
+        //   // if user is not logged in
+        //   echo "<a href='signup.php'>Sign up</a>";
+        //   echo "<a href='login.php'>Log in</a>";
+        // }
+      ?>
           </ul>
         </div>
       </nav>

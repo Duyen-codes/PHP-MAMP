@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include 'header.php'?>
 <section>
     <h2>Please login</h2>
     <form method="post" action="login.php" class="login_form">
@@ -16,18 +16,20 @@ if(isset($_POST['submit'])) {
     $username = $_POST['uid'];
     $pwd = $_POST['pwd'];
     require_once 'db.php';
-    $query = "SELECT * FROM snapUser where userUid=$username";
+    $query = "SELECT * FROM snapUser where userUid='$username'";
     $result = mysqli_query($conn, $query);
-   if($result == false) {
-       die('Login failed');
-       exit;
-   } 
-        $_SESSION['userUid'] = $row['userUid'];  
-        header('location: account.php');
+    if(!$result) {
+        die('Login failed');
         exit();
-    
-   
-}
-
+    } 
+    $row = mysqli_fetch_assoc($result);
+    $pwdHashed = $row['userPwd'];
+    $checkPwd = password_verify($pwd, $row['userPwd']);
+    if($checkPwd == true) {
+        $_SESSION['user_id'] = $row['userId'];
+        $_SESSION["user_Uid"] = $row['userUid'];
+        header("location: account.php");
+        exit();
+    }}
 ?>
 <?php include 'footer.php' ?>
