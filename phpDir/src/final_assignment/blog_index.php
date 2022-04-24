@@ -8,7 +8,6 @@
             echo "<h3>Hello " . $_SESSION['useruid'] . "." . " Welcome back!" . "</h3>"; 
         }
       ?>
-    
     </section>
     <section>
       <h2>We are coming soon. </h2>
