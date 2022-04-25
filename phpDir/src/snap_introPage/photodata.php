@@ -21,12 +21,12 @@ if (isset($_POST['uploadfile'])) {
     } else {
         $msg = "Failed to upload image";
     }
-
     // Display image 
     $image = $_FILES['choosefile']['name'];
     $img = "uploads/" . $image;
     echo '<img src="' . $img . '">';
 }
+
 ?>
 <h2>Online EXIF data viewer</h2>
 <p>Uncover hidden metadata from your photos.</p>
