@@ -24,7 +24,7 @@ session_start();
         <ul>
           <li><a href="home.php">Features</a></li>
           <li><a href="photodata.php">Photo data</a></li>
-          <li><a href="home.php">Career</a></li>
+          <li><a href="blog.php">Blog</a></li>
           <li><a href="home.php">About</a></li>
         </ul>
         <ul class="cta">
@@ -33,7 +33,7 @@ session_start();
           ?>
           <?php
           if (isset($_SESSION["user_Uid"])) {
-            // check if user is logged in 
+            // check if user is logged in
             echo "<a href='account.php'>Profile page</a>";
             echo "<a href='logout.php'>Log out</a>";
           } else {
