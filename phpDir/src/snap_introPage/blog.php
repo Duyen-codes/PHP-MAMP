@@ -4,8 +4,9 @@ $dir = __DIR__ . '/files';
 if (($_SERVER['REQUEST_METHOD'] == 'POST') && (isset($_POST['save-file']))) {
     $filename = isset($_POST['file']) ? $_POST['file'] : null;
     $content = isset($_POST['content']) ? $_POST['content'] : null;
-    echo $filename;
-    echo $content;
+    $myfile = fopen($dir . DIRECTORY_SEPARATOR . $filename . '.md', mode: 'w');
+    fwrite($myfile, $content);
+    fclose($myfile);
 }
 ?>
 <section>
