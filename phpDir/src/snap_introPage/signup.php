@@ -1,4 +1,4 @@
-<?php include_once 'header.php' ?>
+<?php include 'includes/header.php' ?>
 <section class="signup_section">
     <h2>Please sign up</h2>
     <form action="signup.php" method="post" class="signup_form">
@@ -6,7 +6,7 @@
         <div><input type="text" name="lastname" placeholder="Last name..."></div>
         <div><input type="text" name="email" placeholder="Email..."></div>
         <div>
-            <input type="text" name="uid" placeholder="user name...">
+            <input type="text" name="uid" placeholder="User name...">
         </div>
         <div><input type="text" name="pwd" placeholder="Password..."></div>
         <div><input type="text" name="pwdrepeat" placeholder="Repeat your password..."></div>
@@ -45,4 +45,4 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-<?php include 'footer.php' ?>
+<?php include 'includes/footer.php' ?>

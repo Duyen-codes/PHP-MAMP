@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'includes/header.php'; ?>
 <?php
 $dir = __DIR__ . '/files';
 $currentContent = "";
@@ -48,8 +48,8 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (isset($_POST['view-file']))) {
 <section>
     <h2>Markdown Generator</h2>
     <!-- View file -->
-    <form method="post">
-        View Files: <select name="selectedfile">
+    <form method="post" class="markdown_form">
+        Choose file to view:* <select name="selectedfile" required>
             <option>--Select a file--</option>
             <?php foreach (get_files_listing($dir) as $file) : ?>
                 <option value="<?php echo $file; ?>"><?php echo $file; ?></option>
@@ -57,7 +57,6 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (isset($_POST['view-file']))) {
         </select> <br>
         <button type="submit" name="view-file">View</button><br>
         <!-- Write file-->
-
         New File: <input type="text" name="file" placeholder="File name..." value="<?php echo $currentFile; ?>"> <br />
         <textarea id="file-input" name="content" id="" cols="30" rows="10" placeholder="File content...">
             <?php echo $currentContent; ?>

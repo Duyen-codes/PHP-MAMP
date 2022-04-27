@@ -1,5 +1,4 @@
-<?php session_start() ?>
-<?php include 'header.php'; ?>
+<?php include './includes/header.php'; ?>
 <main>
   <div class="hero-content">
     <h2>Make remote work</h2>
@@ -34,4 +33,4 @@ if (isset($_POST['submit'])) {
     exit;
   }
 } ?>
-<?php include 'footer.php' ?>
+<?php include 'includes/footer.php' ?>

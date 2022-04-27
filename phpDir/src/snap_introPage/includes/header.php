@@ -21,7 +21,8 @@
       <div class="primary-navigation" data-visible="false">
         <ul>
           <li><a href="photodata.php">Photo data</a></li>
-          <li><a href="blog.php">Blog</a></li>
+          <li><a href="markdown.php">Markdown generator</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
         <ul class="cta">
           <?php

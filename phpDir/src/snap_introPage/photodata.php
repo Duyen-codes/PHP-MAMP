@@ -1,4 +1,4 @@
-<?php include_once 'header.php' ?>
+<?php include 'includes/header.php' ?>
 <?php
 $msg = "";
 $imageFileType = '';
