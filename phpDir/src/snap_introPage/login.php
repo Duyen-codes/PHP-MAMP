@@ -1,16 +1,22 @@
-<?php session_start() ?>
+<?php include 'header.php' ?>
 <?php
 if (isset($_POST['submit'])) {
     $username = $_POST['uid'];
     $pwd = $_POST['pwd'];
     require_once 'db.php';
-    $query = "SELECT * FROM snapUser where userUid='$username'";
+
+    // SQL statement requesting data from 'snapUser' table
+    $query = "SELECT * FROM snapUser where userUid='$username' or userEmail='$username'";
     $result = mysqli_query($conn, $query);
     if (!$result) {
         die('Login failed');
         exit();
     }
+
+    // Assign data returned to $row variable 
     $row = mysqli_fetch_assoc($result);
+
+    // compare hashed password from 'snapUser' table with $pwd user enter to form using password_verify
     $pwdHashed = $row['userPwd'];
     $checkPwd = password_verify($pwd, $row['userPwd']);
     if ($checkPwd == true) {
@@ -19,12 +25,11 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-<?php include 'header.php' ?>
 <section>
     <h2>Please login</h2>
     <form method="post" action="login.php" class="login_form">
         <div>
-            <input type="text" name="uid" placeholder="username">
+            <input type="text" name="uid" placeholder="username/email...">
         </div>
         <div>
             <input type="text" name="pwd" placeholder="password...">
