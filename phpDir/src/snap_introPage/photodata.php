@@ -38,5 +38,4 @@ if (isset($_POST['uploadfile'])) {
         </input>
     </div>
     <?php echo $msg ?>
-    <h3>File type: <?php echo $imageFileType ?></h3>
 </form>
