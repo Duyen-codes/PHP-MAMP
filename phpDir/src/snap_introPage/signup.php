@@ -1,4 +1,4 @@
-<?php include 'header.php' ?>
+<?php include_once 'header.php' ?>
 <section class="signup_section">
     <h2>Please sign up</h2>
     <form action="signup.php" method="post" class="signup_form">

@@ -1,4 +1,6 @@
-<?php include_once 'header.php'; ?>
+<?php
+// include header file
+include_once 'header.php'; ?>
 <?php
 // check if user is logged in 
 if (isset($_SESSION["user_Uid"])) {

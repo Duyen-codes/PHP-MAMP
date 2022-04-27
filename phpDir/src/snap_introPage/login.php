@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <?php
 if (isset($_POST['submit'])) {
     $username = $_POST['uid'];
@@ -16,7 +17,6 @@ if (isset($_POST['submit'])) {
         $_SESSION["user_Uid"] = $row['userUid'];
         header("location: account.php");
     }
-    var_dump($_SESSION);
 }
 ?>
 <?php include 'header.php' ?>
