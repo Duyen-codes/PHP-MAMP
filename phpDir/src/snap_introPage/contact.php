@@ -32,7 +32,7 @@ if (isset($_POST["contact"])) {
 
 <div class="contact_container">
     <? if (isset($sent)) {
-        echo '<h3> Message sent</h3>';
+        echo '<h3> We have received your message. We will get back to you shortly.</h3>';
     }  ?>
     <h1>Contact Us</h1>
     <form class="contact_form" action="contact.php" method="POST">

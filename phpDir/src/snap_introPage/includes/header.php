@@ -13,7 +13,7 @@
 <body>
   <header>
     <nav>
-      <a href="home.php">
+      <a href="index.php">
         <img src="./images/logo.svg" alt="snap logo" />
       </a>
       <button class="mobile-nav-toggle" aria-expanded="false"></button>

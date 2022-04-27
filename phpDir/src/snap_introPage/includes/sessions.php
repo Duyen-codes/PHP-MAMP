@@ -2,7 +2,7 @@
 session_start();
 $user_Uid = $_SESSION['user_Uid'] ?? false;
 echo $user_Uid;
-header('location: account.php');
+header('location: logout.php');
 
 function login()  // Remember user passed login
 {

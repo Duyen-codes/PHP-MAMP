@@ -7,7 +7,7 @@
       create team rituals, and watch productivity soar. Learn more by
       subscribing to our newsletter.
     </p>
-    <form action="home.php" method="post">
+    <form action="index.php" method="post">
       <input type="text" placeholder="Email" name="email" />
       <input type="submit" value="Subscribe" name="submit" />
     </form>
@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
   $result = mysqli_query($conn, $query);
   if (!$result) {
     die('Subcription failed');
-    header("location: home.php");
+    header("location: index.php");
     exit;
   }
 } ?>

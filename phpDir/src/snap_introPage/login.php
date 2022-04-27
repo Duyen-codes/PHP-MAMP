@@ -1,9 +1,16 @@
 <?php
-include 'includes/sessions.php';
+// Initialize the session
+session_start();
+// Check if the user is already logged in, if yes then redirect him to welcome page
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    header("location: account.php");
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['uid'];
     $pwd = $_POST['pwd'];
-    require_once 'db.php';
+    include 'db.php';
 
     // SQL statement requesting data from 'snapUser' table
     $query = "SELECT * FROM snapUser where userUid='$username'";
@@ -20,8 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $pwdHashed = $row['userPwd'];
     $checkPwd = password_verify($pwd, $row['userPwd']);
     if ($checkPwd == true) {
+
+        // Store data in session variables
+        $_SESSION["loggedin"] = true;
         $_SESSION["user_Uid"] = $row['userUid'];
-        include 'includes/sessions.php';
         header("location: account.php");
     }
 }
