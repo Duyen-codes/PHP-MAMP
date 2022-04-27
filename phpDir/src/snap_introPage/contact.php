@@ -32,9 +32,9 @@ if (isset($_POST["contact"])) {
 
 <div class="contact_container">
     <? if (isset($sent)) {
-        echo '<h3> We have received your message. We will get back to you shortly.</h3>';
+        echo '<h3> Thanks for contacting use! We will be in touch with you shortly.</h3>';
     }  ?>
-    <h1>Contact Us</h1>
+    <h2>Send Us a Message</h2>
     <form class="contact_form" action="contact.php" method="POST">
         <input type="text" name="fullname" placeholder="First and last name"><br>
         <input type="email" name="email" placeholder="Your email"><br>

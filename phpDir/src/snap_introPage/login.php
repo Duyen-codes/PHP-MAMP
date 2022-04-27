@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION["loggedin"] = true;
         $_SESSION["user_Uid"] = $row['userUid'];
         header("location: account.php");
+        exit;
     }
 }
 ?>
@@ -41,10 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h2>Please login</h2>
     <form method="post" action="login.php" class="login_form">
         <div>
-            <input type="text" name="uid" placeholder="username">
+            <input type="text" name="uid" placeholder="Username">
         </div>
         <div>
-            <input type="text" name="pwd" placeholder="password...">
+            <input type="text" name="pwd" placeholder="Password...">
         </div>
         <input type="submit" value="LOG IN" name="submit">
     </form>
